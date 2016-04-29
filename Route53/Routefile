@@ -1,0 +1,18 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+hosted_zone "gjcxyo.net." do
+  rrset "mail.gjcxyo.net.", "A" do
+    ttl 86400
+    resource_records(
+      "10.0.10.13"
+    )
+  end
+
+  rrset "www.gjcxyo.net.", "A" do
+    ttl 300
+    resource_records(
+      "10.0.10.11",
+      "10.0.10.12"
+    )
+  end
+end
